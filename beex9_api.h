@@ -12,41 +12,32 @@
  * KIND, either express or implied.
  *
  ***************************************************************************/
-#ifndef __BEEX_123_H__
-#define __BEEX_123_H__
+#ifndef __BEEX_API_H__
+#define __BEEX_API_H__
 
-//******************************************************************************
-//** include **
-//******************************************************************************
+#ifdef __cplusplus
+extern "C"
+{
+#endif
+
 #include "utilx9.h"
 
-#include "beex_api.h"
-
-#define TAG "BEEX_123"
-#define BEEX_UUID "1234567890"
-
-//******************************************************************************
-//** feature **
-//******************************************************************************
-#define USE_BEEX_123_UV
-//#define USE_AUTOSAVE
-#define USE_ASYNC_CREATE
-
-#define USE_MCTT_BEE
-#define USE_MCTT_BEE_DEMO
-
+#include "beex9_report.h"
+#include "beex9_translater.h"
+#include "beex9_honeycomb.h"
 
 //******************************************************************************
 //** define **
 //******************************************************************************
-#define FILENAME_OF_MCTT_HONEYCOMB "mctt_honeycomb.json"
 
 
 //******************************************************************************
 //** function **
 //******************************************************************************
 
-void app_save(void);
 
 
+#ifdef __cplusplus
+}
+#endif
 #endif

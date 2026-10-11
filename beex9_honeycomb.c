@@ -14,7 +14,7 @@
  ***************************************************************************/
 #include <math.h>
 
-#include "beex_api.h"
+#include "beex9_api.h"
 
 int honeycomb_topic2issueitem(Honeycomb_t *honeycomb_ctx, IssueItem_t *c_issueitem, char *topic, char topic_ary[][LEN_OF_TOPIC_TOKEN])
 {

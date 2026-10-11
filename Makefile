@@ -10,7 +10,7 @@ VERSION_MINOR = 0
 VERSION_REVISION = 0
 VERSION_FULL = $(VERSION_MAJOR).$(VERSION_MINOR).$(VERSION_REVISION)
 LIBNAME_A =
-LIBNAME_SO = beex
+LIBNAME_SO = beex9
 LIBNAME_MOD =
 
 LIBBEEX_VERSION="0x$(shell printf "%02X" $(VERSION_MAJOR))$(shell printf "%03X" $(VERSION_MINOR))$(shell printf "%03X" $(VERSION_REVISION))"
@@ -32,10 +32,10 @@ ARFLAGS = rcs
 
 #** LIBXXX_OBJS **
 LIBXXX_OBJS += \
-							beex_honeycomb.o \
-							beex_tracker.o \
-							beex_report.o \
-							beex_translater.o
+							beex9_honeycomb.o \
+							beex9_tracker.o \
+							beex9_report.o \
+							beex9_translater.o
 
 # cpp
 LIBXXX_OBJS += \
@@ -55,12 +55,12 @@ endif
 
 #** HEADER_FILES **
 HEADER_FILES = \
-							beex_api.h \
-							beex_honeycomb.h \
-							beex_report.h \
-							beex_translater.h \
-							beex_zware.h \
-							beex_def.h
+							beex9_api.h \
+							beex9_honeycomb.h \
+							beex9_report.h \
+							beex9_translater.h \
+							beex9_zware.h \
+							beex9_def.h
 
 #** librarys **
 LIBS_yes = $(LIBXXXS_yes)
@@ -79,7 +79,7 @@ CLEAN_LIBS = $(LIBXXX_A) $(LIBXXX_SO) $(LIBXXX_MOD)
 
 #** Target (CLEAN_BINS) **
 CLEAN_BINS += \
-							beex_123
+							beex9_123
 
 # cpp
 CLEAN_BINS += \

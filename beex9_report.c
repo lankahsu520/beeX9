@@ -14,8 +14,8 @@
  ***************************************************************************/
 #include <math.h>
 
-#include "beex_api.h"
-#include "beex_tracker.h"
+#include "beex9_api.h"
+#include "beex9_tracker.h"
 
 //static char my_mac[LEN_OF_MAC] = MAC_NULL;
 //static char my_uuid[LEN_OF_UUID] = UUID_NULL;

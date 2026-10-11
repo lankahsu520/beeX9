@@ -15,7 +15,7 @@
 #include <signal.h>
 #include <getopt.h>
 
-#include "beex_123.h"
+#include "beex9_123.h"
 
 // ** app **
 static int is_quit = 0;
@@ -314,7 +314,7 @@ static Commander_t commander_bee =
 	.id_to.epid = JVAL_EPID_BASE,
 };
 
-Honeycomb_t beex123_data =
+Honeycomb_t beex9123_data =
 {
 	.keepothers = 0,
 	.uuid_root = BEEX_UUID,
@@ -446,7 +446,7 @@ void app_save(void)
 #ifdef USE_AUTOSAVE
 	{
 		// we dont need to save every 30mins.
-		honeycomb_save(&beex123_data);
+		honeycomb_save(&beex9123_data);
 	}
 #endif
 }
@@ -464,8 +464,8 @@ static void app_stop(void)
 
 #ifdef USE_MCTT_BEE
 		{
-			honeycomb_stop(&beex123_data);
-			honeycomb_close(&beex123_data);
+			honeycomb_stop(&beex9123_data);
+			honeycomb_close(&beex9123_data);
 		}
 #endif
 
@@ -489,13 +489,13 @@ static void app_loop(void)
 
 #ifdef USE_MCTT_BEE
 	{
-		SAFE_SPRINTF_EX(beex123_data.iface_mac, "%s", iface_mac);
-		SAFE_SPRINTF_EX(beex123_data.json_f_mctt, "%s/%s", save_path, FILENAME_OF_MCTT_HONEYCOMB);
+		SAFE_SPRINTF_EX(beex9123_data.iface_mac, "%s", iface_mac);
+		SAFE_SPRINTF_EX(beex9123_data.json_f_mctt, "%s/%s", save_path, FILENAME_OF_MCTT_HONEYCOMB);
 
 		commander_set_frm_mac(&commander_bee, iface_mac);
 
-		honeycomb_open(&beex123_data);
-		//honeycomb_register(&beex123_data);
+		honeycomb_open(&beex9123_data);
+		//honeycomb_register(&beex9123_data);
 	}
 #endif
 
@@ -654,7 +654,7 @@ static void app_ParseArguments(int argc, char **argv)
 	}
 }
 
-// ./bin/beex_123 -d 2 -s /tmp -i enp0s9
+// ./bin/beex9_123 -d 2 -s /tmp -i enp0s9
 int main(int argc, char *argv[])
 {
 	app_ParseArguments(argc, argv);

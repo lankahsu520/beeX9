@@ -23,14 +23,14 @@ extern "C"
 #include "stdint.h"
 
 #ifdef PJ_BEEX_ZWARE
-#include "beex_zware.h"
+#include "beex9_zware.h"
 #elif defined(PJ_HAS_ZWARE)
 #include "zware/zip_api_pte.h"
 #include "zware/zip_api.h"
 #else
-#include "beex_zware.h"
+#include "beex9_zware.h"
 #endif
-#include "beex_def.h"
+#include "beex9_def.h"
 
 //******************************************************************************
 //** define **
